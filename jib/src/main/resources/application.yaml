@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: jib-demo
+server:
+  port: 8081

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>parent-modules</artifactId>
+        <groupId>com.nttuanit</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>jib</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>${jib-maven-plugin.version}</version>
+                <configuration>
+                    <to>
+                        <image>${project.artifactId}</image>
+                    </to>
+                    <from>
+                        <image>${jib.base.image}</image>
+                    </from>
+                    <container>
+                        <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+                        <mainClass>${application.class}</mainClass>
+                        <jvmFlags>
+                            <jvmFlag>-Xscmx200m</jvmFlag>
+                        </jvmFlags>
+                    </container>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <jib.base.image>ibm-semeru-runtimes:open-17-jre</jib.base.image>
+        <jib-maven-plugin.version>3.2.1</jib-maven-plugin.version>
+        <application.class>com.nttuanit.jib.Application</application.class>
+        <spring-boot.version>2.6.6</spring-boot.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+</project>

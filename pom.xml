@@ -11,6 +11,7 @@
     <modules>
         <module>aws-modules</module>
         <module>parent-spring-boot-2</module>
+        <module>jib</module>
     </modules>
 
     <build>
@@ -29,6 +30,7 @@
         <aws-java-sdk.version>1.12.225</aws-java-sdk.version>
         <guava.version>31.0.1-jre</guava.version>
         <commons-io.version>2.11.0</commons-io.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
 </project>
