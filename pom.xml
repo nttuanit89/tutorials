@@ -12,6 +12,7 @@
         <module>aws-modules</module>
         <module>parent-spring-boot-2</module>
         <module>jib</module>
+        <module>event-driven-module</module>
     </modules>
 
     <build>
