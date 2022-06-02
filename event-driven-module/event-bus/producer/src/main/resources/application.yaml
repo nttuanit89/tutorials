@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: producer-demo
+server:
+  port: 8081
+
+event-bus:
+  enable: false
+  env: local
+  region: ap-southeast-1
+  account: 707822483489
+  sns:
+    topics:
+      exampleTopic: arn:aws:sns:${event-bus.region}:${event-bus.account}:${event-bus.env}-exampleTopic.fifo

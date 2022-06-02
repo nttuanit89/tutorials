@@ -47,7 +47,7 @@
     <properties>
         <jib.base.image>ibm-semeru-runtimes:open-17-jre</jib.base.image>
         <jib-maven-plugin.version>3.2.1</jib-maven-plugin.version>
-        <application.class>com.nttuanit.jib.Application</application.class>
+        <application.class>com.nttuanit.jib.com.nttuanit.eventdriven.eventbus.producer.Application</application.class>
         <spring-boot.version>2.6.6</spring-boot.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>

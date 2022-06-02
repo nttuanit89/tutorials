@@ -9,11 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.nttuanit.eventdriven.common</groupId>
-    <artifactId>common-lib</artifactId>
-    <version>1.0</version>
-    <packaging>jar</packaging>
-    <description>A abstract bus library that allows microservices to send and/or receive messages</description>
+    <artifactId>event-bus</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>consumer</module>
+        <module>producer</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
