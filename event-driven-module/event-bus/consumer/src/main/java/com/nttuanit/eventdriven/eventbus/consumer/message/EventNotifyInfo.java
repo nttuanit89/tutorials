@@ -1,4 +1,4 @@
-package com.nttuanit.eventdriven.eventbus.producer.message;
+package com.nttuanit.eventdriven.eventbus.consumer.message;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: consumer-demo
+server:
+  port: 8082
+
+aws:
+  key:
+    id: AKIAZTN4IH3IHMBW7C6F
+    secret: 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
+
+event-bus:
+  enable: true
+  region: ap-southeast-1
+  account: 660209155792
+  sqs:
+    endpoint: https://sqs.ap-southeast-1.amazonaws.com
+    queues:
+      message-changed: messageChanged.fifo

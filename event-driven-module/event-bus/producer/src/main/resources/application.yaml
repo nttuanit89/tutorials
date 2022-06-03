@@ -4,11 +4,16 @@ spring:
 server:
   port: 8081
 
+aws:
+  key:
+    id: AKIAZTN4IH3IHMBW7C6F
+    secret: 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
+
 event-bus:
-  enable: false
-  env: local
+  enable: true
   region: ap-southeast-1
-  account: 707822483489
+  account: 660209155792
   sns:
+    endpoint: https://sns.ap-southeast-1.amazonaws.com
     topics:
-      exampleTopic: arn:aws:sns:${event-bus.region}:${event-bus.account}:${event-bus.env}-exampleTopic.fifo
+      message-changed: arn:aws:sns:${event-bus.region}:${event-bus.account}:messageChanged.fifo

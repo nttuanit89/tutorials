@@ -25,7 +25,7 @@ public class EventBusConfig {
   @Bean
   EventProducer<EventNotifyInfo> eventProducer(
       @Qualifier("snsEventBus") EventBus eventBus,
-      @Value("${event-bus.sns.topics.exampleTopic}") String topic) {
+      @Value("${event-bus.sns.topics.message-changed}") String topic) {
     return eventBus.createEventProducer(topic);
   }
 }

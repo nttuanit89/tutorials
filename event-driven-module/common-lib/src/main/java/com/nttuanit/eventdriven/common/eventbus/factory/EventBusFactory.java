@@ -26,7 +26,7 @@ public class EventBusFactory {
     if (sqsEventBus == null) {
       String sqsEndpoint =
           applicationContext.getEnvironment().getProperty("event-bus.sqs.endpoint", "");
-      String region = applicationContext.getEnvironment().getProperty("event-bus.sqs.region", "");
+      String region = applicationContext.getEnvironment().getProperty("event-bus.region", "");
       String accessKeyId = applicationContext.getEnvironment().getProperty("aws.key.id", "");
       String accessKeySecret =
           applicationContext.getEnvironment().getProperty("aws.key.secret", "");
@@ -47,13 +47,13 @@ public class EventBusFactory {
   public static synchronized EventBus getSnsEventBusFactory(
       GenericApplicationContext applicationContext) {
     if (snsEventBus == null) {
-      String sqsEndpoint =
+      String snsEndpoint =
           applicationContext.getEnvironment().getProperty("event-bus.sns.endpoint", "");
-      String region = applicationContext.getEnvironment().getProperty("event-bus.sns.region", "");
+      String region = applicationContext.getEnvironment().getProperty("event-bus.region", "");
       String accessKeyId = applicationContext.getEnvironment().getProperty("aws.key.id", "");
       String accessKeySecret =
           applicationContext.getEnvironment().getProperty("aws.key.secret", "");
-      snsEventBus = new SnsEventBus(sqsEndpoint, region, accessKeyId, accessKeySecret);
+      snsEventBus = new SnsEventBus(snsEndpoint, region, accessKeyId, accessKeySecret);
     }
     return snsEventBus;
   }
