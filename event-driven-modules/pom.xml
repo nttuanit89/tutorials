@@ -20,7 +20,7 @@
         </dependency>
     </dependencies>
 
-    <artifactId>event-driven-module</artifactId>
+    <artifactId>event-driven-modules</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>common-lib</module>
