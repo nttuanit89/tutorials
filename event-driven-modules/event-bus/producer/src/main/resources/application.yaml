@@ -6,8 +6,8 @@ server:
 
 aws:
   key:
-    id: AKIAZTN4IH3IHMBW7C6F
-    secret: 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
+    id: id
+    secret: secret
 
 event-bus:
   enable: true

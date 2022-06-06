@@ -13,6 +13,7 @@
         <module>parent-spring-boot-2</module>
         <module>jib</module>
         <module>event-driven-module</module>
+        <module>crud-module</module>
     </modules>
 
     <build>
