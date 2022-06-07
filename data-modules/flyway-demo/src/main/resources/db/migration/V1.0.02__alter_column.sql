@@ -1,0 +1,1 @@
+ALTER TABLE user_profile.profile RENAME COLUMN name TO full_name;

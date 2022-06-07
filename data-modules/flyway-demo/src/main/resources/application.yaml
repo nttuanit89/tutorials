@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: flyway-demo
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://postgres.gcp.tutorial:5432/tutorial?currentSchema=user_profile
+    username: nttuanit
+    password: n@ttuanit89
+    test-on-borrow: true
+    validation-query: SELECT 1
+    hikari:
+      poolName: Hikari
+      auto-commit: true
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    database: POSTGRESQL
+    show-sql: true
+    hibernate.ddl-auto: validate
+    properties:
+      hibernate.temp.use_jdbc_metadata_defaults: false
+    open-in-view: false
+  flyway:
+    baseline-on-migrate: true
+server:
+  port: 8081

@@ -1,0 +1,1 @@
+ALTER TABLE user_profile.profile ADD COLUMN email TEXT NOT NULL;

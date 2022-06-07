@@ -14,6 +14,7 @@
         <module>jib</module>
         <module>event-driven-modules</module>
         <module>common-modules</module>
+        <module>data-modules</module>
     </modules>
 
     <build>
@@ -126,6 +127,7 @@
             <artifactId>opentelemetry-extension-annotations</artifactId>
             <version>${opentelemetry.version}</version>
         </dependency>
+
     </dependencies>
 
     <properties>
